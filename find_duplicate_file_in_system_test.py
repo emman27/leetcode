@@ -2,9 +2,10 @@ from find_duplicate_file_in_system import Directory, File
 
 
 def test_file_from_string():
-    f = File.from_str("1.txt(abcd)")
+    f = File.from_str("1.txt(abcd)", '')
     assert "1.txt" == f.name
     assert "abcd" == f.content
+    assert '' == f.path
 
 
 def test_directory_from_string():
