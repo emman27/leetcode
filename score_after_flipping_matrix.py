@@ -9,6 +9,7 @@ class Solution:
         for col in range(len(A[0])):
             if self._should_flip_col([row[col] for row in A]):
                 A = self._flip_col(A, col)
+        print(A)
         return self._score(A)
 
     def _score(self, matrix: List[List[int]]) -> int:
@@ -25,5 +26,5 @@ class Solution:
 
     def _flip_col(self, mat: List[List[int]], col_num: int):
         for row in mat:
-            row[col_num] = 1 if row[col_num] == 0 else 1
+            row[col_num] = 1 if row[col_num] == 0 else 0
         return mat
