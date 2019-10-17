@@ -17,3 +17,8 @@ def test_position_of_final_node():
     assert 1 == Solution()._position_of_final_node(1)
     assert 2 == Solution()._position_of_final_node(2)
     assert 1 == Solution()._position_of_final_node(3)
+
+
+def test_random():
+    assert [1, 3, 4, 14] == Solution().pathInZigZagTree(14)
+    assert [1, 2, 6, 10, 26] == Solution().pathInZigZagTree(26)
