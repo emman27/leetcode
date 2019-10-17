@@ -7,3 +7,15 @@ def test_balanced():
 
 def test_unbalanced_left():
     assert 1 == Solution().minAddToMakeValid("(")
+
+
+def test_unbalanced_right():
+    assert 1 == Solution().minAddToMakeValid(")")
+
+
+def test_two():
+    assert 2 == Solution().minAddToMakeValid(")(")
+
+
+def test_nested():
+    assert 0 == Solution().minAddToMakeValid("((()))")
