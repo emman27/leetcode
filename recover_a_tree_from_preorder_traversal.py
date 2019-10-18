@@ -5,7 +5,10 @@ class TreeNode:
         self.left = None
         self.right = None
 
+    def __eq__(self, other):
+        return self.val == other.val and self.left == other.left and self.right == other.right
+
 
 class Solution:
     def recoverFromPreorder(self, S: str) -> TreeNode:
-        return TreeNode()
+        return TreeNode(int(S[0]))
